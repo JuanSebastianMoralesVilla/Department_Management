@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\Department_Management\Department_Management\bin\Debug\Department_Management.exe.config
+C:\Users\user\Desktop\Department_Management\Department_Management\bin\Debug\Department_Management.exe
+C:\Users\user\Desktop\Department_Management\Department_Management\bin\Debug\Department_Management.pdb
+C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.Form1.resources
+C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.Properties.Resources.resources
+C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.exe
+C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.pdb

@@ -16,5 +16,23 @@ namespace Department_Management
         {
             InitializeComponent();
         }
+
+        OpenFileDialog file = new OpenFileDialog();
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            file.Filter = "CSV|*.csv";
+
+            if (file.ShowDialog()==DialogResult.OK)
+
+            {
+                textBox1.Text = file.FileName;
+                textBox2.Text = file.SafeFileName;
+
+            } 
+
+
+        }
     }
 }
