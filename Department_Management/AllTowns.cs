@@ -8,11 +8,11 @@ namespace Department_Management
 {
     public class AllTowns
     {
-        private int idDepartment { get; set; }
-        private int idTown { get; set; }
-        private string nameDepartment { get; set;}
-        private string nameTown { get; set; }
-        private string type { get; set; }
+        public int idDepartment { get; set; }
+        public int idTown { get; set; }
+        public string nameDepartment { get; set;}
+        public string nameTown { get; set; }
+        public string type { get; set; }
 
         public AllTowns(int idDepartment,int idTown,string nameDepartment,string nameTown, string type)
         {

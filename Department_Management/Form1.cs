@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Department_Management
 {
@@ -39,6 +40,8 @@ namespace Department_Management
             return list;
         }
         */
+
+        // abrir archivo buscarlo
         OpenFileDialog file = new OpenFileDialog();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -54,6 +57,8 @@ namespace Department_Management
                 textBox2.Text = file.SafeFileName;
                 MessageBox.Show("  Datos cargados correctamente");
                 loadGrid();
+                // mostrar grafica
+                chartData();
             } 
 
 
@@ -91,12 +96,14 @@ namespace Department_Management
         }
         
         private void Form1_Load(object sender, EventArgs e)
-            // departamentos
+            
         {
 
-           
+           // cargar datos
             
             loadGrid();
+
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -170,5 +177,32 @@ namespace Department_Management
         {
 
         }
+
+
+        private void chartData() {
+
+            // vectores con datos
+            // name dept es nombre de dpeartamentos
+            string[] namedept = { "AMAZONAS", "ANTIOQUIA", "ARAUCA", "ATLANTICO", "BOLIVAR", "BOYACA", "CALDAS", "CAQUETA", "CASANARE", "CAUCA", "CESAR", "CHOCO", "CORDOBA", "CUNDINAMARCA", "GUAINIA", "GUAJIRA", "GUAVIARE", "HUILA", "MAGDALENA", "META", "N SANTANDER", "NARINO", "PUTUMAYO", "QUINDIO", "RISARALDA", "SAN ANDRES", "SANTANDER", "SUCRE", "TOLIMA", "VALLE DEL CAUCA", "VAUPES", "VICHADA" };
+            //
+            int[] cantDep = { 13, 4, 4, 5, 6, 7, 8, 8, 5, 1, 2, 10, 20, 50, 12, 47, 68, 19, 20, 21, 22, 25, 21, 24, 25, 36, 42, 28, 29, 30, 32, 37 };
+
+
+            chart1.Palette = ChartColorPalette.Excel;
+
+            chart1.Titles.Add("Cantidad de municipios en colombia por departamento");
+
+            for (int i = 0; i< namedept.Length;i++) {
+                Series serie= chart1.Series.Add(namedept[i]);
+
+
+                serie.Label = cantDep[i].ToString();
+
+
+                serie.Points.Add(cantDep[i]);
+            }
+
+        }
     }
+
 }
