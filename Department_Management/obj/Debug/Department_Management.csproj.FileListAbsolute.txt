@@ -8,3 +8,13 @@ C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Depa
 C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.exe
 C:\Users\user\Desktop\Department_Management\Department_Management\obj\Debug\Department_Management.pdb
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\Department_Management.exe.config
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\Department_Management.exe
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\Department_Management.pdb
+E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.csprojAssemblyReference.cache
+E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.Form1.resources
+E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.Properties.Resources.resources
+E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.csproj.GenerateResource.cache
+E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.csproj.CoreCompileInputs.cache
+E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.exe
+E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.pdb
