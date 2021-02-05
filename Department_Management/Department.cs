@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,14 +12,14 @@ namespace Department_Management
         private string name { get; set; }
         private int id { get; set; }
         private int size { get; set; }
-        public Department(int id,strign name)
+        public Department(int id, string name)
         {
             towns = new List<Town>();
             this.name = name;
             this.id = id;
             size = 0;
         }
-        public add(int idTown,string nameTown,string type)
+        public void add(int idTown, string nameTown, string type)
         {
 
         }

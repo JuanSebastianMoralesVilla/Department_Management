@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Department_Management",
-    "\\Department_Management\\bin\\Release",
-    "\\Department_Management\\obj\\Release"
+    "\\Department_Management"
   ],
-  "SelectedNode": "\\Department_Management\\Department.cs",
+  "SelectedNode": "\\Department_Management",
   "PreviewInSolutionExplorer": false
 }

@@ -26,7 +26,7 @@ namespace Department_Management
                 departments.Add(depart);
                 size++;
             }else{
-                depart = departments.IndexOf(size-1);
+                //depart = departments.IndexOf();
             }
         }
     }

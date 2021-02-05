@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 
 namespace Department_Management
 {
-    public class Town
+    class Department
     {
+        private List<Town> towns { get; set; }
         private string name { get; set; }
         private int id { get; set; }
-        private string type { get; set; }
-        public Town(string name, int id, string type)
+        private int size { get; set; }
+        public Department(int id, strign name)
         {
+            towns = new List<Town>();
             this.name = name;
             this.id = id;
-            this.type = type;
+            size = 0;
+        }
+        public add(int idTown, string nameTown, string type)
+        {
+
         }
     }
 }

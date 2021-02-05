@@ -7,17 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Department_Management
 {
     public partial class Form1 : Form
     {
         private string path;
-        public List<Country> Countries {get;set;}
         public Form1()
         {
-            path = "";
-            Countries = GetCountries();
+            path = "E:/ICESI/Integrador I/Department_Management/Department_Management/data/DIVIPOLA-_C_digos_municipios.csv";
 
             InitializeComponent();
         }
@@ -54,22 +53,45 @@ namespace Department_Management
                 path = file.FileName;
                 textBox2.Text = file.SafeFileName;
                 MessageBox.Show("  Datos cargados correctamente");
-
+                loadGrid();
             } 
 
 
         }
 
-       
-        private void Form1_Load(object sender, EventArgs e)
+        private void loadGrid()
         {
+            try
+            {
+                Console.WriteLine("Entre");
+                var reader = new StreamReader(File.OpenRead(path));
+                string line = reader.ReadLine();
+                line = reader.ReadLine();
+                List<AllTowns> towns = new List<AllTowns>();
+                while (!string.IsNullOrEmpty(line))
+                {
+                    string[] array = line.Split(',');
+                    int idDepartment = Int32.Parse(array[0]);
+                    int idTown = Int32.Parse(array[1]);
+                    string nameDepartment = (array[2]);
+                    string nameTown = (array[3]);
+                    string type = (array[4]);
+                    AllTowns all = new AllTowns(idDepartment, idTown, nameDepartment, nameTown, type);
+                    Console.WriteLine(all.ToString());
+                    towns.Add(all);
+                    line = reader.ReadLine();
+                }
+                dataGridView1.DataSource = towns;
+            }
+            catch (Exception wtf)
+            {
+                Console.WriteLine(wtf.ToString());
+            }
+        }
+        private void Form1_Load(object sender, EventArgs e)
             // departamentos
-            var depts = this.Countries;
-            var reader = new StreamReader(File.OpenRead(path));
-            dataGridView1.DataSource = depts;
-
-
-
+        {
+            loadGrid();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,6 +160,11 @@ namespace Department_Management
                 dataGridView1.Columns["typeDept"].Visible = true;
 
             }
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
