@@ -82,7 +82,8 @@ namespace Department_Management
             "CODIGO MUNICIPIO",
             "NOMBRE DEPARTAMENTO",
             "NOMBRE MUNICIPIO",
-            "TIPO"});
+            "TIPO",
+            "TODOS"});
             this.comboBox1.Location = new System.Drawing.Point(254, 140);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
