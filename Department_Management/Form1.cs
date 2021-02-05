@@ -72,9 +72,11 @@ namespace Department_Management
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-       
+            //Reporte 1. Con base en un combobox (lista de opciones desplegable) donde estén todos los valores posibles de los tipos, 
+           // permita que el usuario seleccione un tipo y filtre los datos de manera que en la tabla donde se despliegan,
+              //  solamente queden las filas cuya columna tipo sea la seleccionada.
 
-
+            // tarea 1.1
 
             if (comboBox1.SelectedIndex == 0)  { 
             dataGridView1.Columns["idDept"].Visible =true;
