@@ -54,6 +54,7 @@ namespace Department_Management
             {
                 textBox1.Text = file.FileName;
                 textBox2.Text = file.SafeFileName;
+                MessageBox.Show("  Datos cargados correctamente");
 
             } 
 
