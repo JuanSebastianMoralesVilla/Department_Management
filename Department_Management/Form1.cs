@@ -12,19 +12,17 @@ namespace Department_Management
 {
     public partial class Form1 : Form
     {
-
-
+        private string path;
         public List<Country> Countries {get;set;}
-
-
         public Form1()
         {
-
+            path = "";
             Countries = GetCountries();
 
             InitializeComponent();
         }
 
+        /*
         private List<Country> GetCountries()
         {
 
@@ -41,7 +39,7 @@ namespace Department_Management
 
             return list;
         }
-
+        */
         OpenFileDialog file = new OpenFileDialog();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -53,6 +51,7 @@ namespace Department_Management
 
             {
                 textBox1.Text = file.FileName;
+                path = file.FileName;
                 textBox2.Text = file.SafeFileName;
                 MessageBox.Show("  Datos cargados correctamente");
 
@@ -66,8 +65,10 @@ namespace Department_Management
         {
             // departamentos
             var depts = this.Countries;
-
+            var reader = new StreamReader(File.OpenRead(path));
             dataGridView1.DataSource = depts;
+
+
 
         }
 

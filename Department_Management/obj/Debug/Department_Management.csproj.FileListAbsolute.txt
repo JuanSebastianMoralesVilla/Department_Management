@@ -18,3 +18,11 @@ E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Depa
 E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.csproj.CoreCompileInputs.cache
 E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.exe
 E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.pdb
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\DocumentFormat.OpenXml.dll
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\SpreadsheetLight.dll
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\System.Drawing.Common.dll
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\System.IO.Packaging.dll
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\DocumentFormat.OpenXml.xml
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\SpreadsheetLight.xml
+E:\ICESI\Integrador I\Department_Management\Department_Management\bin\Debug\System.IO.Packaging.xml
+E:\ICESI\Integrador I\Department_Management\Department_Management\obj\Debug\Department_Management.csproj.CopyComplete
