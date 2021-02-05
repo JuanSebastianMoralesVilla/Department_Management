@@ -29,7 +29,7 @@ namespace Department_Management
         {
 
             // agregar el formato csv
-            var list = new List<Country>();
+            var list= new List<Country>();
             list.Add(new Country()
             {
                 idDept = "1",
