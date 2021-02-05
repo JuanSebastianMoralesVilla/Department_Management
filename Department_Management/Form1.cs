@@ -16,7 +16,7 @@ namespace Department_Management
         private string path;
         public Form1()
         {
-            path = "E:/ICESI/Integrador I/Department_Management/Department_Management/data/DIVIPOLA-_C_digos_municipios.csv";
+            path = @"C: \Users\user\Desktop\Department_Management\Department_Management\data\DIVIPOLA - _C_digos_municipios.csv";
 
             InitializeComponent();
         }
@@ -59,6 +59,7 @@ namespace Department_Management
 
         }
 
+        
         private void loadGrid()
         {
             try
@@ -88,9 +89,13 @@ namespace Department_Management
                 Console.WriteLine(wtf.ToString());
             }
         }
+        
         private void Form1_Load(object sender, EventArgs e)
             // departamentos
         {
+
+           
+            
             loadGrid();
         }
 
@@ -102,62 +107,60 @@ namespace Department_Management
 
             // tarea 1.1
 
-            if (comboBox1.SelectedIndex == 0)  { 
-            dataGridView1.Columns["idDept"].Visible =true;
-                dataGridView1.Columns["idMunicipio"].Visible = false;
-                dataGridView1.Columns["NameDept"].Visible = false;
-                dataGridView1.Columns["NameMunicipio"].Visible = false;
-                dataGridView1.Columns["typeDept"].Visible = false;
-            
+            if (comboBox1.SelectedIndex == 0)  {
+                dataGridView1.Columns["idDepartment"].Visible = true;
+                dataGridView1.Columns["idTown"].Visible = false;
+                dataGridView1.Columns["nameDepartment"].Visible = false;
+                dataGridView1.Columns["nameTown"].Visible = false;
+                dataGridView1.Columns["type"].Visible = false;
             }
 
 
             if (comboBox1.SelectedIndex == 1)
             {
-                dataGridView1.Columns["idDept"].Visible = false;
-                dataGridView1.Columns["idMunicipio"].Visible = true;
-                dataGridView1.Columns["NameDept"].Visible = false;
-                dataGridView1.Columns["NameMunicipio"].Visible = false;
-                dataGridView1.Columns["typeDept"].Visible = false;
+                dataGridView1.Columns["idDepartment"].Visible = false;
+                dataGridView1.Columns["idTown"].Visible = true;
+                dataGridView1.Columns["nameDepartment"].Visible = false;
+                dataGridView1.Columns["nameTown"].Visible = false;
+                dataGridView1.Columns["type"].Visible = false;
 
             }
 
             if (comboBox1.SelectedIndex == 2)
             {
-                dataGridView1.Columns["idDept"].Visible = false;
-                dataGridView1.Columns["idMunicipio"].Visible = false;
-                dataGridView1.Columns["NameDept"].Visible = true;
-                dataGridView1.Columns["NameMunicipio"].Visible = false;
-                dataGridView1.Columns["typeDept"].Visible = false;
+                dataGridView1.Columns["idDepartment"].Visible = false;
+                dataGridView1.Columns["idTown"].Visible = false;
+                dataGridView1.Columns["nameDepartment"].Visible = true;
+                dataGridView1.Columns["nameTown"].Visible = false;
+                dataGridView1.Columns["type"].Visible = false;
 
             }
 
             if (comboBox1.SelectedIndex == 3)
             {
-                dataGridView1.Columns["idDept"].Visible = false;
-                dataGridView1.Columns["idMunicipio"].Visible = false;
-                dataGridView1.Columns["NameDept"].Visible = false;
-                dataGridView1.Columns["NameMunicipio"].Visible = true;
-                dataGridView1.Columns["typeDept"].Visible = false;
-
+                dataGridView1.Columns["idDepartment"].Visible = false;
+                dataGridView1.Columns["idTown"].Visible = false;
+                dataGridView1.Columns["nameDepartment"].Visible = false;
+                dataGridView1.Columns["nameTown"].Visible = true;
+                dataGridView1.Columns["type"].Visible = false;
             }
 
             if (comboBox1.SelectedIndex == 4)
             {
-                dataGridView1.Columns["idDept"].Visible = false;
-                dataGridView1.Columns["idMunicipio"].Visible = false;
-                dataGridView1.Columns["NameDept"].Visible = false;
-                dataGridView1.Columns["NameMunicipio"].Visible =false;
-                dataGridView1.Columns["typeDept"].Visible = true;
+                dataGridView1.Columns["idDepartment"].Visible = false;
+                dataGridView1.Columns["idTown"].Visible = false;
+                dataGridView1.Columns["nameDepartment"].Visible = false;
+                dataGridView1.Columns["nameTown"].Visible = false;
+                dataGridView1.Columns["type"].Visible =true;
 
             }
             if (comboBox1.SelectedIndex == 5)
             {
-                dataGridView1.Columns["idDept"].Visible = true;
-                dataGridView1.Columns["idMunicipio"].Visible = true;
-                dataGridView1.Columns["NameDept"].Visible = true;
-                dataGridView1.Columns["NameMunicipio"].Visible = true;
-                dataGridView1.Columns["typeDept"].Visible = true;
+                dataGridView1.Columns["idDepartment"].Visible = true;
+                dataGridView1.Columns["idTown"].Visible = true;
+                dataGridView1.Columns["nameDepartment"].Visible = true;
+                dataGridView1.Columns["nameTown"].Visible = true;
+                dataGridView1.Columns["type"].Visible = true;
 
             }
 

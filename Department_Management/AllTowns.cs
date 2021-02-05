@@ -23,6 +23,8 @@ namespace Department_Management
             this.type = type;
         }
 
+     
+
         override
             public String ToString()
         {
