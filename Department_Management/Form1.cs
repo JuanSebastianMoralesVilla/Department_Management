@@ -40,6 +40,7 @@ namespace Department_Management
                 path = file.FileName;
                 textBox2.Text = file.SafeFileName;
                 MessageBox.Show("  Datos cargados correctamente");
+                colombia = new Country();
                 loadGrid();
                 // mostrar grafica
                 chartData();
@@ -68,7 +69,7 @@ namespace Department_Management
                     string type = (array[4]);
                     AllTowns all = new AllTowns(idDepartment, idTown, nameDepartment, nameTown, type);
                     colombia.add(idDepartment, idTown, nameDepartment, nameTown, type);
-                   // Console.WriteLine(all.ToString());
+                    //Console.WriteLine(all.ToString());
                     towns.Add(all);
                     line = reader.ReadLine();
                 }
@@ -170,8 +171,8 @@ namespace Department_Management
             // name dept es nombre de dpeartamentos
             string[] namedept = colombia.getDepartments();
             int[] cantDep = colombia.getAmmount();
-
-
+            chart1.Series.Clear();
+            chart1.Titles.Clear();
             chart1.Palette = ChartColorPalette.Excel;
             
             chart1.Titles.Add("Cantidad de municipios en colombia por departamento");
@@ -180,7 +181,8 @@ namespace Department_Management
                 Series serie= chart1.Series.Add(namedept[i]);
                 serie.Label = cantDep[i].ToString();
                 serie.Points.AddXY(i,cantDep[i]);
-                serie.BorderWidth = 3;
+                //serie.BorderWidth = 3;
+                //serie.BorderWidth = 3;
             }
 
         }

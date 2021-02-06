@@ -76,9 +76,9 @@ namespace Department_Management
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(58, 182);
+            this.dataGridView1.Location = new System.Drawing.Point(72, 133);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(499, 446);
+            this.dataGridView1.Size = new System.Drawing.Size(499, 467);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -107,19 +107,20 @@ namespace Department_Management
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.DataSource = this.chart1.Images;
+            this.chart1.ImeMode = System.Windows.Forms.ImeMode.Off;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(584, 182);
+            this.chart1.Location = new System.Drawing.Point(659, 154);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            this.chart1.Size = new System.Drawing.Size(565, 446);
+            this.chart1.Size = new System.Drawing.Size(490, 446);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Department_Management.Properties.Resources.colombia;
-            this.pictureBox1.Location = new System.Drawing.Point(787, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(787, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(233, 136);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
