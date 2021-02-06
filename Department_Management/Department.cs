@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Department_Management
 {
-    public class Department
+    public class Department : IComparable<Department>
     {
         private List<Town> towns { get; set; }
-        private string name { get; set; }
-        private int id { get; set; }
-        private int size { get; set; }
+        public string name { get; set; }
+        public int id { get; set; }
+        public int size { get; set; }
         public Department(int id, string name)
         {
             towns = new List<Town>();
@@ -21,7 +21,14 @@ namespace Department_Management
         }
         public void add(int idTown, string nameTown, string type)
         {
+            Town town = new Town(nameTown, idTown, type);
+            towns.Add(town);
+            size++;
+        }
 
+        public int CompareTo(Department department)
+        {
+            return size - department.size;
         }
     }
 }

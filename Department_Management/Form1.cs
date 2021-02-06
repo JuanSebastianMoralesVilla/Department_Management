@@ -15,31 +15,15 @@ namespace Department_Management
     public partial class Form1 : Form
     {
         private string path;
+        private Country colombia;
         public Form1()
         {
             path = @"C: \Users\user\Desktop\Department_Management\Department_Management\data\DIVIPOLA - _C_digos_municipios.csv";
-
+            colombia = new Country();
             InitializeComponent();
         }
 
-        /*
-        private List<Country> GetCountries()
-        {
-
-            // agregar el formato csv
-            var list= new List<Country>();
-            list.Add(new Country()
-            {
-                idDept = "1",
-                idMunicipio = "1",
-                NameDept = "Antioquia",
-                NameMunicipio = "Medellin",
-                typeDept = "Municipio"
-            });
-
-            return list;
-        }
-        */
+       
 
         // abrir archivo buscarlo
         OpenFileDialog file = new OpenFileDialog();
@@ -83,7 +67,8 @@ namespace Department_Management
                     string nameTown = (array[3]);
                     string type = (array[4]);
                     AllTowns all = new AllTowns(idDepartment, idTown, nameDepartment, nameTown, type);
-                    Console.WriteLine(all.ToString());
+                    colombia.add(idDepartment, idTown, nameDepartment, nameTown, type);
+                   // Console.WriteLine(all.ToString());
                     towns.Add(all);
                     line = reader.ReadLine();
                 }
@@ -183,23 +168,19 @@ namespace Department_Management
 
             // vectores con datos
             // name dept es nombre de dpeartamentos
-            string[] namedept = { "AMAZONAS", "ANTIOQUIA", "ARAUCA", "ATLANTICO", "BOLIVAR", "BOYACA", "CALDAS", "CAQUETA", "CASANARE", "CAUCA", "CESAR", "CHOCO", "CORDOBA", "CUNDINAMARCA", "GUAINIA", "GUAJIRA", "GUAVIARE", "HUILA", "MAGDALENA", "META", "N SANTANDER", "NARINO", "PUTUMAYO", "QUINDIO", "RISARALDA", "SAN ANDRES", "SANTANDER", "SUCRE", "TOLIMA", "VALLE DEL CAUCA", "VAUPES", "VICHADA" };
-            //
-            int[] cantDep = { 13, 4, 4, 5, 6, 7, 8, 8, 5, 1, 2, 10, 20, 50, 12, 47, 68, 19, 20, 21, 22, 25, 21, 24, 25, 36, 42, 28, 29, 30, 32, 37 };
+            string[] namedept = colombia.getDepartments();
+            int[] cantDep = colombia.getAmmount();
 
 
             chart1.Palette = ChartColorPalette.Excel;
-
+            
             chart1.Titles.Add("Cantidad de municipios en colombia por departamento");
 
             for (int i = 0; i< namedept.Length;i++) {
                 Series serie= chart1.Series.Add(namedept[i]);
-
-
                 serie.Label = cantDep[i].ToString();
-
-
-                serie.Points.Add(cantDep[i]);
+                serie.Points.AddXY(i,cantDep[i]);
+                serie.BorderWidth = 3;
             }
 
         }
