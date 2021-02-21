@@ -8,9 +8,12 @@ namespace Department_Management
 {
     public class Town
     {
-        private string name { get; set; }
-        private int id { get; set; }
-        private string type { get; set; }
+        public string name { get; set; }
+        public int id { get; set; }
+        public string type { get; set; }
+        public const string MUNICIPIO = "Municipio";
+        public const string ISLA = "Isla";
+        public const string NO_MUNICIPALIZADA = "Área no municipalizada";
         public Town(string name, int id, string type)
         {
             this.name = name;

@@ -74,6 +74,8 @@ namespace Department_Management
                     line = reader.ReadLine();
                 }
                 dataGridView1.DataSource = towns;
+                comboBox1.Visible = true;
+                comboBox2.Visible = true;
             }
             catch (Exception wtf)
             {
@@ -159,6 +161,8 @@ namespace Department_Management
 
         }
 
+     
+
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -191,8 +195,54 @@ namespace Department_Management
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             //filtrar por municipio, isla, area no municipalizad
-            List<AllTowns> towns = new List<AllTowns>();
- 
+            int index = comboBox2.SelectedIndex;
+            List<AllTowns> townsGrid = new List<AllTowns>();
+            List<Department> departments = colombia.departments;
+            foreach (Department department in departments)
+            {
+                List<Town> towns = department.towns;
+                foreach (Town town in towns)
+                {
+                    int idDepartment = department.id;
+                    int idTown = town.id;
+                    string nameDepartment = department.name;
+                    string nameTown = town.name;
+                    string type = town.type;
+                    bool add = false;
+                    switch (index)
+                    {
+                        case 0:
+                            Console.WriteLine(type);
+                            if (type.Equals(Town.MUNICIPIO))
+                            {
+                                add = true;
+                            }
+                            break;
+                        case 1:
+                            if (type.Equals(Town.ISLA))
+                            {
+                                add = true;
+                            }
+                            break;
+                        case 2:
+                            if (type.Equals(Town.NO_MUNICIPALIZADA))
+                            {
+                                add = true;
+                            }
+                            break;
+                        default:
+                            add = true;
+                            break;
+                    }
+                    if (add)
+                    {
+                        AllTowns all = new AllTowns(idDepartment, idTown, nameDepartment, nameTown, type);
+                        townsGrid.Add(all);
+                    }
+                }
+            }
+            dataGridView1.DataSource = townsGrid;
+
         }
     }
 

@@ -8,7 +8,7 @@ namespace Department_Management
 {
     public class Department : IComparable<Department>
     {
-        private List<Town> towns { get; set; }
+        public List<Town> towns { get; set; }
         public string name { get; set; }
         public int id { get; set; }
         public int size { get; set; }

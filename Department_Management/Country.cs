@@ -8,7 +8,7 @@ namespace Department_Management
 {
 
    public  class Country{
-        private List<Department> departments{get;set;}
+        public List<Department> departments{get;set;}
         public int size{get;set;}
 
         public Country (){

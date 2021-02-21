@@ -32,8 +32,8 @@ namespace Department_Management
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -94,23 +94,24 @@ namespace Department_Management
             "NOMBRE MUNICIPIO",
             "TIPO",
             "TODOS"});
-            this.comboBox1.Location = new System.Drawing.Point(98, 106);
+            this.comboBox1.Location = new System.Drawing.Point(414, 106);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(251, 21);
+            this.comboBox1.Size = new System.Drawing.Size(157, 21);
             this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "Seleccione";
+            this.comboBox1.Text = "Mostrar solamente:";
+            this.comboBox1.Visible = false;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // chart1
             // 
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chart1.BorderlineWidth = 3;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
             this.chart1.DataSource = this.chart1.Images;
             this.chart1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(659, 154);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
@@ -130,17 +131,17 @@ namespace Department_Management
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Municipio",
             "Isla",
             "Area no municipalizada",
             "Todos"});
-            this.comboBox2.Location = new System.Drawing.Point(377, 106);
+            this.comboBox2.Location = new System.Drawing.Point(72, 106);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(194, 21);
             this.comboBox2.TabIndex = 7;
             this.comboBox2.Text = "Seleccione el tipo de datos";
+            this.comboBox2.Visible = false;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // Form1
