@@ -186,6 +186,14 @@ namespace Department_Management
             }
 
         }
+
+        // combo box para filtrar datos por tipo
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //filtrar por municipio, isla, area no municipalizad
+            List<AllTowns> towns = new List<AllTowns>();
+ 
+        }
     }
 
 }
